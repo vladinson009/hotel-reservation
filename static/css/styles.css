@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('/static/css/guest-form.css');
 
 *,
 *:before,
@@ -185,3 +186,4 @@ button:hover {
 .selected-room {
   background-color: #cfcbca;
 }
+
