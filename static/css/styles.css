@@ -145,6 +145,7 @@ form h3 {
   font-weight: 500;
   line-height: 42px;
   text-align: center;
+
 }
 
 label {
@@ -184,6 +185,7 @@ button {
 
 button:hover {
   box-shadow: 1px 1px 11px 8px #e7a83a;
+
 }
 
 .site-content {
@@ -239,6 +241,7 @@ button:hover {
   align-content: flex-end;
   justify-content: center;
 }
+
 .thank-you {
   display: flex;
   align-items: center;
