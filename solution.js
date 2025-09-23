@@ -24,3 +24,8 @@ document
 function cleanData(e) {
   changeContent('search-form-content');
 }
+
+
+const test = () => {
+  console.log(test);
+}
