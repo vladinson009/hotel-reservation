@@ -26,7 +26,6 @@ function cleanData(e) {
 }
 
 // From Admin => Start
-
 document.querySelector('#guest-details-back-btn').addEventListener('click', (e) => fillRoomForm(e));
 
 function fillRoomForm(e) {
@@ -62,8 +61,26 @@ function fillConfirmReservationData(customReservation) {
     document.querySelector('.confirm-reservation #guest-data-in').textContent = `Date-in: ${customReservation.startDate}`;
     document.querySelector('.confirm-reservation #guest-data-out').textContent = `Date-out: ${customReservation.endDate}`;
 }
-
 // From Admin => End
 
 
+//From Verifier => Start
+document
+  .querySelector('#confirm-back-btn')
+  .addEventListener('click', (e) => getBackToPersonalData(e));
+
+function getBackToPersonalData(e) {
+  e.preventDefault();
+  changeContent('guest-details-form-content');
+}
+
+document
+  .querySelector('#confirm-reservation')
+  .addEventListener('click', (e) => showThanksPage(e));
+
+function showThanksPage(e) {
+  e.preventDefault();
+  changeContent('thank-you-content');
+}
+// From Verifier => End
 
