@@ -35,23 +35,37 @@
         <label for="people">Numbers of people:</label>
         <input type="number" min="1" id="people" name="phone-number" />
 
-        <button id="search-form-button">Next</button>
+        <button id="search-form-button" type="button">Next</button>
       </form>
     </div>
 
     <!-- Our Offers (твоята секция) -->
+    <!-- Our Offers (оферти със снимки + цени) -->
     <div class="custom-form search-result-form-content hidden">
       <h2>Our Offers</h2>
-      <form id="offers-form">
-        <fieldset>
-          <legend>Choose room type</legend>
-          <label><input type="radio" name="roomType" value="single" checked> Single Room</label>
-          <label><input type="radio" name="roomType" value="double"> Double Room</label>
-          <label><input type="radio" name="roomType" value="apartment"> Apartment</label>
-        </fieldset>
-        <button type="button" id="btnSelectOffer">Select Offer</button>
-      </form>
+      <div class="offers">
+        <div class="offer-card" data-room="budget">
+          <img src="./static/img/budgetRoom.jpg" alt="Budget Room">
+          <span>Budget Room – 120 USD</span>
+        </div>
+
+        <div class="offer-card" data-room="family">
+          <img src="./static/img/familyRoom.jpg" alt="Family Room">
+          <span>Family Room – 250 USD</span>
+        </div>
+
+        <div class="offer-card" data-room="king">
+          <img src="./static/img/kingRoom.jpg" alt="King Room">
+          <span>King Room – 500 USD</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="offers-back-btn">Back</button>
+        <button id="offers-next-btn" disabled>Next</button>
+      </div>
     </div>
+
 
     <!-- Guest Details (от main) -->
     <div class="guest-details-form-content custom-form hidden">
