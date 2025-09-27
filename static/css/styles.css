@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('/static/css/guest-form.css');
 
 *,
 *:before,
-*:after { padding: 0; margin: 0; box-sizing: border-box; }
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -16,7 +21,10 @@ body {
   background-color: #080710;
 }
 
-#welcome { margin: 0; background-color: #000; }
+#welcome {
+  margin: 0;
+  background-color: #000;
+}
 #welcome > h1 {
   text-align: center;
   font-family: 'Passions Conflict', cursive;
@@ -35,14 +43,30 @@ body {
   background-clip: text;
 }
 
-.home-container { margin: 0 auto 4px 0; height: 1rem; display: flex; text-align: center; }
-.info { display: flex; flex-direction: column; position: relative; flex: 1; margin-top: 10rem; }
-.info > h1 { font-size: 2rem; margin: -10.3rem 0 0; font-weight: 700; text-transform: uppercase; color: rgb(242,238,213); }
+.home-container {
+  margin: 0 auto 4px 0;
+  height: 1rem;
+  display: flex;
+  text-align: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  margin-top: 10rem;
+}
+.info > h1 {
+  font-size: 2rem;
+  margin: -10.3rem 0 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(242,238,213);
+}
 
 .site-content { display: block; padding-bottom: 2rem; }
 .hidden { display: none !important; }
 
-/* === OUR OFFERS (scoped) === */
 .search-result-form-content {
   background: #f2f2f2;
   padding: 20px;
@@ -50,7 +74,6 @@ body {
   width: min(640px, 92%);
   margin: 20px auto;
 }
-
 #offers-form fieldset { border: 1px solid #ccc; padding: 12px; margin: 10px 0; }
 #offers-form legend { font-weight: 600; margin-bottom: 6px; }
 #offers-form label { display: block; margin: 6px 0; }
@@ -65,27 +88,174 @@ body {
 }
 #offers-form button:hover { background: #0056b3; }
 
-/* === THANK YOU (glass) — SCOPED само вътре в .thank-you-content === */
-.thank-you-content { position: relative; width: 100%; height: 70vh; }
-.thank-you-content .background {
-  width: 430px; height: 415px; position: absolute;
-  transform: translate(-50%, -50%); left: 50%; top: 60%;
+/* === THANK YOU (glass style) === */
+.thank-you-content {
+  position: relative;
+  width: 100%;
+  height: 70vh;
 }
-.thank-you-content .background .shape { height: 200px; width: 200px; position: absolute; border-radius: 50%; }
+.thank-you-content .background {
+  width: 430px;
+  height: 415px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+}
+.thank-you-content .background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
 .thank-you-content .shape:first-child { background: linear-gradient(#36251b, #7c4f30); left: -80px; top: -80px; }
 .thank-you-content .shape:last-child { background: linear-gradient(to right, #daa022, #f09819); right: -30px; bottom: -80px; }
-
 .thank-you-content form {
-  height: 320px; width: 400px; background-color: rgba(255,255,255,0.13);
-  position: absolute; transform: translate(-50%, -50%); top: 60%; left: 50%;
-  border-radius: 10px; backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  height: 320px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
   padding: 40px 35px;
 }
 .thank-you-content form * { color: #ffffff; }
-.thank-you-content form h3 { font-size: 32px; font-weight: 500; line-height: 42px; text-align: center; }
+.thank-you-content form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
 .thank-you-content button {
-  margin-top: 30px; width: 100%; background-color: #ffffff; color: #080710;
-  padding: 15px 0; font-size: 18px; font-weight: 600; border-radius: 5px; cursor: pointer; border: none;
+  margin-top: 30px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
 .thank-you-content button:hover { box-shadow: 1px 1px 11px 8px #e7a83a; }
+
+.buttons { display: flex; }
+.buttons button { margin: 20px; }
+
+.offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 77%;
+}
+.offer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: 1px 1px 5px 3px white;
+}
+.offer-card:nth-child(3) img { margin-right: 38px; }
+.offer-card:hover { box-shadow: 1px 1px 18px 3px white; }
+.offer-card img { max-width: 90px; margin-right: 20px; }
+
+.confirm-reservation {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.thank-you {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.selected-room { background-color: #cfcbca; }
+
+/* === Search form стилове === */
+.search-form-content .background {
+  width: 430px;
+  height: 415px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+}
+.search-form-content .background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+.search-form-content .shape:first-child { background: linear-gradient(#36251b, #7c4f30); left: -80px; top: -80px; }
+.search-form-content .shape:last-child { background: linear-gradient(to right, #daa022, #f09819); right: -30px; bottom: -80px; }
+.search-form-content form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+}
+.search-form-content form * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+.search-form-content form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+.search-form-content label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.search-form-content input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.search-form-content ::placeholder { color: #e5e5e5; }
+.search-form-content button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search-form-content button:hover { box-shadow: 1px 1px 11px 8px #e7a83a; }
